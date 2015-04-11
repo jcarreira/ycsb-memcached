@@ -19,7 +19,7 @@
 #
 
 # The Java implementation to use. This is required.
-#export JAVA_HOME=
+export JAVA_HOME=/usr
 
 # Any JVM options to pass.
 #export YCSB_OPTS="-Djava.compiler=NONE"
