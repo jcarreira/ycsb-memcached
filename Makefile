@@ -22,7 +22,7 @@ VOLDEMORT_DIR=db/voldemort/lib
 VOLDEMORT_FILE=voldemort-0.90.1.tar.gz
 
 .PHONY: build
-build: download-database-deps
+build: 
 	ant -q -e compile
 	grep name=\"dbcompile build.xml | perl -ne '$$_=~/name=\"(.+)\"\s+depends/; print "$$1\n"; system "ant -q -e $$1"'
 

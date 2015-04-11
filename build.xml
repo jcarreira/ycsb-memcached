@@ -15,61 +15,11 @@
         </fileset>
     </path>
 
-    <target name="dbcompile-infinispan-5.0" depends="compile">
-        <property name="db.dir" value="db/infinispan-5.0" />
-        <antcall target="dbcompile" />
-    </target>
-
-    <target name="dbcompile-cassandra-0.5" depends="compile">
-    	<property name="db.dir" value="db/cassandra-0.5"/>
-        <antcall target="dbcompile"/>
-    </target>
-    	
-   	<target name="dbcompile-cassandra-0.6" depends="compile">
-		<property name="db.dir" value="db/cassandra-0.6"/>
-		<antcall target="dbcompile"/>
-	</target>
-   	
-   	<target name="dbcompile-cassandra-0.7" depends="compile">
-		<property name="db.dir" value="db/cassandra-0.7"/>
-		<antcall target="dbcompile"/>
-	</target>   	
-
-        <target name="dbcompile-cassandra-0.8" depends="compile">
-                <property name="db.dir" value="db/cassandra-0.8"/>
-                <antcall target="dbcompile"/>
-        </target>
-   	
-   	<target name="dbcompile-hbase" depends="compile">
-		<property name="db.dir" value="db/hbase"/>
-		<antcall target="dbcompile"/>
-	</target>
-
    	<target name="dbcompile-memcached" depends="compile">
 		<property name="db.dir" value="db/memcached"/>
 		<antcall target="dbcompile"/>
 	</target>
 
-   	<target name="dbcompile-mongodb" depends="compile">
-		<property name="db.dir" value="db/mongodb"/>
-		<antcall target="dbcompile"/>
-	</target>
-
-   	<target name="dbcompile-voldemort" depends="compile">
-		<property name="db.dir" value="db/voldemort"/>
-		<antcall target="dbcompile"/>
-	</target>
-   	
-   	<target name="dbcompile-jdbc" depends="compile">
-   		<property name="db.dir" value="db/jdbc"/>
-   	    <antcall target="dbcompile"/>
-   	</target>
-
-    <target name="dbcompile-redis" depends="compile">
-        <property name="db.dir" value="db/redis"/>
-        <antcall target="dbcompile"/>
-    </target>
-	
  	<target name="compile">
         <mkdir dir="${classes.dir}"/>
         <javac includeantruntime="false" srcdir="${src.dir}"
